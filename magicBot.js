@@ -30,12 +30,14 @@ const gameBotFunction = function() {
 
       answer = Number(answer);
 
+      attempts--
+
         if (answer > mysteryNumber) {
-          alert(`Загаданное число больше. Осталось попыток: ${attempts}`)
-        } else if (answer < mysteryNumber) {
-          alert(`Загаданное число меньше. Осталось попыток: ${attempts}`)
+          alert(`Загаданное число меньше. Осталось попыток: ${attempts}`);
+        } else if (answer < mysteryNumber) {          
+          alert(`Загаданное число больше. Осталось попыток: ${attempts}`);
         } else if (answer === mysteryNumber) {
-          let userWin = confirm("Поздравляю Вы угадали!!! Хотели бы сыграть еще?")
+          let userWin = confirm("Поздравляю Вы угадали!!! Хотели бы сыграть еще?");
             if (userWin) {
               attempts = 3;
               randomGenerate(1, 100);
@@ -44,8 +46,7 @@ const gameBotFunction = function() {
             }       
         }
 
-        if (attempts > 0) {
-          attempts--
+        if (attempts > 0) {          
           getNumber();
         } else {
           const showFail = confirm("Попыток больше нет. Хотели бы сыграть еще?");
@@ -57,8 +58,6 @@ const gameBotFunction = function() {
             return
           }
         }
-     
-      
       }
 }
 
